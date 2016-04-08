@@ -15,15 +15,16 @@ public class TicketManager {
 
     }
 
-    public static void openTicketFile() throws IOException {
+    public static void openTicketFile() throws IOException  {
 
         try {
             FileReader fileReader = new FileReader("tickets.txt");
             BufferedReader bufReader = new BufferedReader(fileReader);
             String tickets = bufReader.readLine();
-        } catch (IOException ioe) {
+            bufReader.close();
+        } catch (FileNotFoundException fnfe) {
             System.out.println("Couldn't open tickets.txt");
-            System.out.println(ioe.toString());
+            System.out.println(fnfe.toString());
         }
         //return tickets;
     }
