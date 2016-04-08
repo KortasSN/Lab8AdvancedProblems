@@ -9,6 +9,7 @@ public class TicketManager {
         LinkedList<Ticket> ticketQueue = new LinkedList<Ticket>();
 
         Scanner scan = new Scanner(System.in);
+TicketManagerGUI ticketManagerGUI = new TicketManagerGUI();
 
         while(true){
 
