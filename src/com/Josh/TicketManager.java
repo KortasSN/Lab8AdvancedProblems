@@ -1,11 +1,37 @@
 package com.Josh;
 
+import java.io.*;
 import java.util.*;
 
 public class TicketManager {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        //FileReader fileReader = new FileReader("tickets.txt");
+        FileWriter fileWriter;
 
+        //String numberOfTickets = openTicketFile();
+        //System.out.println(numberOfTickets);   //testing only
+        openTicketFile();
+
+    }
+
+    public static void openTicketFile() throws IOException {
+
+        try {
+            FileReader fileReader = new FileReader("tickets.txt");
+            BufferedReader bufReader = new BufferedReader(fileReader);
+            String tickets = bufReader.readLine();
+        } catch (IOException ioe) {
+            System.out.println("Couldn't open tickets.txt");
+            System.out.println(ioe.toString());
+        }
+        //return tickets;
+    }
+}
+
+
+
+/*
         LinkedList<Ticket> ticketQueue = new LinkedList<Ticket>();
 
         Scanner scan = new Scanner(System.in);
@@ -121,3 +147,4 @@ TicketManagerGUI ticketManagerGUI = new TicketManagerGUI();
     }
 }
 
+*/

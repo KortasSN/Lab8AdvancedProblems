@@ -7,6 +7,10 @@ import java.util.*;
  */
 public class Ticket {
 
+}
+
+/*
+
     public int getPriority() {
         return priority;
     }
@@ -94,6 +98,5 @@ public class Ticket {
 
     }
 
-
-
 }
+*/

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
 
 /**
  * Created by ec0662sr on 4/7/2016.
@@ -24,6 +27,7 @@ public class TicketManagerGUI extends JFrame {
 
 
 
+
     public TicketManagerGUI() {
         super("Ticket Manager");
         setContentPane(rootPanel);
@@ -35,14 +39,14 @@ public class TicketManagerGUI extends JFrame {
 //String priority = (String)setPriority.getSelectedItem();
 
 
-
+//DefaultListModel<String> ticketList
 
 
 
         submitTicketButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-        String ticketInfo = addDescription.getText();
+                String ticketInfo = addDescription.getText();
                 String reported = addWhoReportedTicket.getText();
                 String priority = (String)setPriority.getSelectedItem();
 
